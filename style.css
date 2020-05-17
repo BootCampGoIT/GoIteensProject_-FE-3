@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* =================== header ========================= */
+
 .header {
   height: 25px;
   background-color: black;
@@ -13,6 +15,8 @@
   padding: 0 5px;
   box-shadow: 0px 0px 29px 7px rgba(0, 0, 0, 0.75);
 }
+
+/* ----------- logo --------------------- */
 .logo {
   height: 20px;
   width: 60px;
@@ -26,10 +30,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* ----------------------- navigation ------------------------ */
 .navigationList {
   display: flex;
   justify-content: center;
   list-style: none;
+  /* background-color: teal; */
 }
 .navLink {
   text-transform: uppercase;
@@ -44,7 +51,16 @@
   width: 100px;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
+
+.activeLink {
+  background-color: cornflowerblue;
+  border: 1px solid cornflowerblue;
+  border-radius: 4px;
+}
+
+/* ------------------------user ------------------------------ */
 
 .user {
   position: relative;
@@ -52,6 +68,7 @@
   height: 20px;
   background-color: white;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .userIcon {
@@ -61,23 +78,90 @@
   transform: translate(-50%, -50%);
   height: 13px;
   width: 13px;
-  cursor: pointer;
 }
 
-/* ================================== */
-.activeLink {
-  background-color: cornflowerblue;
-  border: 1px solid cornflowerblue;
-  border-radius: 4px;
-}
 .activeUser {
   background-color: green;
 }
 
+/* ======================= pages ================== */
+/* ++++++++++++++++++ games ++++++++++++++++++ */
+.listItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listItem {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 4px;
+}
+.listItemTitle {
+  font-size: 12px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.listItemImgContainer {
+  width: 100%;
+}
+
+.listItemImg {
+  width: 100%;
+}
+
+.listItemDescription {
+  font-size: 10px;
+  text-align: justify;
+  margin: 10px 0;
+}
+
+.listItemPrice {
+  font-size: 12px;
+}
+
+.order {
+  position: absolute;
+  height: 50px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 5px;
+}
+
+.listItemCart {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.listItemCartIMG {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+ 
+}
+
+/* ========================== media ============================= */
+
 @media (min-width: 768px) {
+  /* ==================== header ============================= */
   .header {
     height: 40px;
   }
+
+  /* ------------------ logo ------------------------ */
   .logo {
     height: 35px;
     width: 80px;
@@ -85,11 +169,15 @@
   .logoIcon {
     position: absolute;
     height: 25px;
+
+    /* ----------------- navigation ---------------------------- */
   }
   .navLink {
     margin: 16px;
     font-size: 14px;
   }
+
+  /* --------------------- user ----------------------- */
   .user {
     width: 30px;
     height: 30px;
