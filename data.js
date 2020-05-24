@@ -1,6 +1,6 @@
 export const games = [
     {
-        id: 1,
+        id: "1",
         category: "games",
         title: "Deep Rock Galactic",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/548430/header_alt_assets_9.jpg?t=1589556152",
@@ -8,7 +8,7 @@ export const games = [
         price: 100
     },
     {
-        id: 2,
+        id: "2",
         category: "games",
         title: "Streets of Rage 4",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/985890/header.jpg?t=1589190999",
@@ -16,7 +16,7 @@ export const games = [
         price: 120
     },
     {
-        id: 3,
+        id: "3",
         category: "games",
         title: "Nimbatus",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/383840/header.jpg?t=1589666338",
@@ -27,7 +27,7 @@ export const games = [
 
 export const programs = [
     {
-        id: 1,
+        id: "1",
         category: "programs",
         title: "Discord Bot Studio",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/1118380/header.jpg?t=1589422873",
@@ -35,7 +35,7 @@ export const programs = [
         price: 320
     },
     {
-        id: 2,
+        id: "2",
         category: "programs",
         title: "My Little Cloud",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/1244390/header.jpg?t=1587665586",
@@ -43,7 +43,7 @@ export const programs = [
         price: 330
     },
     {
-        id: 3,
+        id: "3",
         category: "programs",
         title: "PlayClaw 7",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/1141530/header.jpg?t=1589619851",

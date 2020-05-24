@@ -1,13 +1,16 @@
 import { createMarkup } from '../pages/games.js';
 import { games, programs } from '../../data.js';
+import { addProduct } from '../cart/cart.js';
+import { openCart } from '../modal/modal.js'
 
 
 const header = () => {
     const navigationList = document.querySelector('.navigationList'); //ul
     const listItems = document.querySelector('.listItems'); //ul
-
-
     const user = document.querySelector('.user');
+
+    const headerCart = document.querySelector('.modalCart');
+    headerCart.addEventListener('click', openCart);
 
     const currentActivePage = document.querySelector('.activeLink'); //a
     const currentPageName = document.querySelector('.currentPageName'); //p
@@ -42,12 +45,30 @@ const header = () => {
     }
 
     const addToCart = (event) => {
-        console.log(event.target)
+        if (event.target.dataset.image) {
+            const category = event.target.dataset.category;
+            const id = event.target.dataset.id;
+            if (category === "games") {
+                for (const item of games) {
+                    if (item.id === id) {
+                        addProduct(item);
+                    }
+                }
+            }
+            if (category === "programs") {
+                for (const item of programs) {
+                    if (item.id === id) {
+                        addProduct(item);
+                    }
+                }
+            }
+        } else return
     }
 
-    navigationList.addEventListener('click', setActiveLink);
+    navigationList.addEventListener('click', setActiveLink); //ul 
     user.addEventListener('click', setUser);
-    listItems.addEventListener('click', addToCart)
+
+    listItems.addEventListener('click', addToCart);
 
 }
 
