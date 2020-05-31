@@ -1,7 +1,9 @@
 import { createMarkup } from '../pages/games.js';
 import { games, programs } from '../../data.js';
 import { addProduct } from '../cart/cart.js';
-import { openCart } from '../modal/modal.js'
+import { openCart } from '../modal/modal.js';
+import { openCard } from '../modal/modalCard.js';
+import { cart } from '../cart/cart.js';
 
 
 const header = () => {
@@ -11,6 +13,8 @@ const header = () => {
 
     const headerCart = document.querySelector('.modalCart');
     headerCart.addEventListener('click', openCart);
+
+    const cartCount = document.querySelector('.cartCount');
 
     const currentActivePage = document.querySelector('.activeLink'); //a
     const currentPageName = document.querySelector('.currentPageName'); //p
@@ -44,7 +48,10 @@ const header = () => {
         event.currentTarget.classList.toggle('activeUser');
     }
 
-    const addToCart = (event) => {
+    const openModal = (event) => {
+        if (event.target === event.currentTarget) {
+            return
+        }
         if (event.target.dataset.image) {
             const category = event.target.dataset.category;
             const id = event.target.dataset.id;
@@ -52,6 +59,7 @@ const header = () => {
                 for (const item of games) {
                     if (item.id === id) {
                         addProduct(item);
+                        cartCount.textContent = cart.quantity;
                     }
                 }
             }
@@ -59,16 +67,36 @@ const header = () => {
                 for (const item of programs) {
                     if (item.id === id) {
                         addProduct(item);
+                        cartCount.textContent = cart.quantity;
                     }
                 }
             }
-        } else return
+        } else {
+            const element = event.target.closest('[data-licategory]'); //li
+            const id = element.dataset.liid;
+            const category = element.dataset.licategory;
+            if (category === 'games') {
+                const item = games.find(game => game.id === id);
+                // let item; 
+                // for (const game of games) {
+                //     if (game.id === id) {
+                //         item = game
+                //     }
+                // }
+                openCard(item);
+            }
+            if (category === 'programs') {
+                const item = programs.find(item => item.id === id);
+                openCard(item);
+            }
+        }
+
     }
 
     navigationList.addEventListener('click', setActiveLink); //ul 
     user.addEventListener('click', setUser);
+    listItems.addEventListener('click', openModal);
 
-    listItems.addEventListener('click', addToCart);
 
 }
 

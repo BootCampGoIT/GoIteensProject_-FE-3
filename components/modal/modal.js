@@ -28,17 +28,19 @@ const getTotalPrice = () => {
 
 const instance = basicLightbox.create(`
     <div class="modal">
-    <h2 class="modalTitle">Product in cart: </h2>
-    <ul class="cartList">
-    </ul>
-    <h3 class="totalQuantity">Total quantity:</h3>
-    <h3 class="totalPrice">Total price:</h3>
-    <button class="cartButton">Get order</button>
-    <a>Close</a>
+        <h2 class="modalTitle">Product in cart: </h2>
+        <ul class="cartList">
+        </ul>
+        <div class="modalProperties">
+            <h3 class="totalQuantity">Total quantity:</h3>
+            <h3 class="totalPrice">Total price:</h3>
+        </div>
+        <button class="cartButton">Get order</button>
+    <button class="cartClose">Close</button>
     </div>
 `, {
     onShow: (instance) => {
-        instance.element().querySelector('a').onclick = instance.close;
+        instance.element().querySelector('.cartClose').onclick = instance.close;
     }
 })
 
@@ -58,3 +60,8 @@ export const openCart = () => {
     cartButton.addEventListener('click', getOrder);
     cartButton.onclick = instance.close;
 }
+
+
+
+
+

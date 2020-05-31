@@ -3,16 +3,16 @@ export const games = [
         id: "1",
         category: "games",
         title: "Deep Rock Galactic",
-        url: "https://steamcdn-a.akamaihd.net/steam/apps/548430/header_alt_assets_9.jpg?t=1589556152",
-        description: "Deep Rock Galactic — первый научно-фантастический шутер с видом от первого лица для совместной игры, в котором вас ждут крутые космические гномы, полностью разрушаемое окружение, процедурно генерируемые системы пещер и бесконечные волны инопланетных ...",
-        price: 100
+        url: "https://s.yimg.com/ny/api/res/1.2/12UU2JphAsbxTTDca.7QFQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9MTA4MDtoPTcxNg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2019-11/7b5b5330-112b-11ea-a77f-7c019be7ecae",
+        description: "Deep Rock Galactic — первый научно-фантастический шутер с видом от первого лица для совместной игры, в котором вас ждут крутые космические гномы, полностью разрушаемое окружение, процедурно генерируемые системы пещер и бесконечные волны инопланетных",
+        price: 100,
     },
     {
         id: "2",
         category: "games",
         title: "Streets of Rage 4",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/985890/header.jpg?t=1589190999",
-        description: "Amongst the best beat’em up series ever created, jammin’ ‘90s beats and over the top street fighting, the iconic series Streets of Rage comes back with a masterful tribute to and revitalization of the classic action fans adore...",
+        description: "Amongst the best beat’em up series ever created, jammin’ ‘90s beats and over the top street fighting, the iconic series Streets of Rage comes back with a masterful tribute to and revitalization of the classic action fans adore",
         price: 120
     },
     {
@@ -20,7 +20,7 @@ export const games = [
         category: "games",
         title: "Nimbatus",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/383840/header.jpg?t=1589666338",
-        description: "Ведите Nimbatus через Вселенную и собирайте дроны из сотен деталей. Сражайтесь с неведомыми опасностями на разрушаемых планетах, соревнуйтесь с другими игроками на аренах и испытайте полную свободу творчества в 'песочнице'...",
+        description: "Ведите Nimbatus через Вселенную и собирайте дроны из сотен деталей. Сражайтесь с неведомыми опасностями на разрушаемых планетах, соревнуйтесь с другими игроками на аренах и испытайте полную свободу творчества в 'песочнице'",
         price: 140
     }
 ]
@@ -39,7 +39,7 @@ export const programs = [
         category: "programs",
         title: "My Little Cloud",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/1244390/header.jpg?t=1587665586",
-        description: "My Little Cloud is an ASMR application but like none available on the market today. Enjoy thunder and rain sounds recorded by Emmy-winner and nature recording genius Gordon Hempton, while watching fluid animations on your computer screen...",
+        description: "My Little Cloud is an ASMR application but like none available on the market today. Enjoy thunder and rain sounds recorded by Emmy-winner and nature recording genius Gordon Hempton, while watching fluid animations on your computer screen",
         price: 330
     },
     {
@@ -47,7 +47,7 @@ export const programs = [
         category: "programs",
         title: "PlayClaw 7",
         url: "https://steamcdn-a.akamaihd.net/steam/apps/1141530/header.jpg?t=1589619851",
-        description: "Use our cool in-game overlays to achieve the best gaming experience! Harnessing the power of your GPU, hardware accelerated H.264 codecs and the various overlays, you will have an advantage over your opponents and you can share your victories...",
+        description: "Use our cool in-game overlays to achieve the best gaming experience! Harnessing the power of your GPU, hardware accelerated H.264 codecs and the various overlays, you will have an advantage over your opponents and you can share your victories",
         price: 340
     }
 ]
